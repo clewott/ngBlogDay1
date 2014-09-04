@@ -1,0 +1,19 @@
+body {
+  margin: 20px;
+  text-align: center;
+  background-image: url("http://subtlepatterns.com/patterns/green_cup.png");
+}
+
+.createPost input,textarea {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+
+.createPost textarea {
+  margin-bottom: 10px;
+}

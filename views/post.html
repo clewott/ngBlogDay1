@@ -1,0 +1,26 @@
+<h1>{{ title }}</h1>
+
+<button class="btn btn-info" ng-click="goToHome()">Go to Home</button>
+<button class="btn btn-success" ng-hide="create" ng-click="create=!create">Create Blog Post</button>
+
+<form class="createPost" ng-show="create" ng-submit="addPost(newPost)">
+  <input type="text" placeholder="Enter Title" ng-model="newPost.title" required>
+  <textarea name="" id="" cols="30" rows="10" placeholder="Enter Blog Post" ng-model="newPost.content" required></textarea>
+  <button class="btn btn-warning" ng-click="create=!create" type="submit">Submit Blog Post</button>
+</form>
+
+
+
+<div ng-repeat="post in posts">
+  <h2>{{post.title}}</h2>
+  <p>Created on: {{ post.date | date : format : timezone}}</p>
+  <p>{{post.content}}</p>
+  <button class="btn btn-primary" ng-hide="edit" ng-click="edit=!edit">Edit Post</button>
+  <button class="btn btn-primary" ng-hide="edit" ng-click="removePost(post)">Delete Post</button>
+
+  <form ng-show="edit">
+    <input type="text" placeholder="Enter Title" ng-model="post.title">
+    <textarea name="" id="" cols="30" rows="10" placeholder="Enter Blog Post" ng-model="post.content"></textarea>
+    <button class="btn btn-warning" ng-click="edit = !edit" type="submit">Update Blog Post</button>
+  </form>
+</div>
