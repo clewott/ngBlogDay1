@@ -10,14 +10,10 @@ angular.module("main-modules", ["main-modules.controllers","ngRoute"])
         templateUrl: "views/post.html",
         controller: "postsController"
       })
-      .when("/edit", {
-        templateUrl: "views/edit.html",
-        controller: "editController"
-      })
       .when("/notFound",
       {
         templateUrl: "views/notFound.html",
-        controller: "homeController"
+        controller: "notFoundController"
       })
       .otherwise({
         redirectTo: "/notFound"

@@ -19,7 +19,6 @@ angular.module("main-modules.controllers")
     console.log("Task is deleted!");
   };
 
-  $scope.notFound = "Sorry, wrong place";
   $scope.goToHome = function () {
     $location.path("/");
   };

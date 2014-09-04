@@ -17,3 +17,7 @@ body {
 .createPost textarea {
   margin-bottom: 10px;
 }
+
+.error {
+  font-size: 5em;
+}

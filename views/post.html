@@ -4,7 +4,7 @@
 <button class="btn btn-success" ng-hide="create" ng-click="create=!create">Create Blog Post</button>
 
 <form class="createPost" ng-show="create" ng-submit="addPost(newPost)">
-  <input type="text" placeholder="Enter Title" ng-model="newPost.title" required>
+  <input type="text" placeholder="Enter Title" ng-model="newPost.title" required />
   <textarea name="" id="" cols="30" rows="10" placeholder="Enter Blog Post" ng-model="newPost.content" required></textarea>
   <button class="btn btn-warning" ng-click="create=!create" type="submit">Submit Blog Post</button>
 </form>
